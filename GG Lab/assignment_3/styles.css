@@ -1,0 +1,572 @@
+/* Import the required fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&family=Bodoni+Moda+SC:wght@400;700&display=swap');
+
+/* Import additional fonts for emotions */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Creepster&family=Fredoka+One&family=Indie+Flower&display=swap');
+
+
+/* Modern Color Palette */
+:root {
+    --primary-dark: #2C3E50;
+    --primary-light: #ECF0F1;
+    --accent-1: #E74C3C;
+    --accent-2: #3498DB;
+    --accent-3: #27AE60;
+    --background: #F9FAFB;
+    --text-color: #2C3E50;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* Main Content Styling */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Typography Section */
+#typography-anatomy {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Heading Styles */
+h2 {
+    grid-column: 1 / -1;
+    color: var(--primary-dark);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--accent-1);
+    padding-bottom: 1rem;
+}
+
+h3 {
+    color: var(--accent-2);
+    font-size: 1.5rem;
+    margin-top: 0;
+    border-left: 4px solid var(--accent-2);
+    padding-left: 1rem;
+}
+
+/* Typography Term Cards */
+.typography-term {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Typography Anatomy Section - Keep blur effect */
+#typography-anatomy:hover .typography-term:not(:hover) {
+    filter: blur(3px);
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+.typography-term:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    filter: blur(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Typeface Classification Section - Remove blur effect */
+#typeface-classification {
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.typeface-term {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Simple hover effect for typeface terms */
+.typeface-term:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus styles for accessibility */
+.typography-term:focus-within {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    filter: blur(0);
+    opacity: 1;
+    z-index: 1;
+    outline: 2px solid var(--accent-2);
+}
+
+/* Paragraph Styling */
+p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+li::before {
+    content: "•";
+    color: var(--accent-3);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Examples Styling */
+strong {
+    color: var(--accent-1);
+    font-weight: 600;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #typography-anatomy {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+    
+    /* Adjust blur effect for mobile */
+    #typography-anatomy:hover .typography-term:not(:hover) {
+        filter: blur(2px);
+        opacity: 0.8;
+    }
+}
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Font Psychology Section */
+#font-psychology {
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+#font-psychology h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+}
+
+#font-psychology .typeface-term {
+    margin-bottom: 2rem;
+}
+
+.font-example {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background-color: var(--background);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.font-characteristics {
+    margin: 1.5rem 0;
+}
+
+.font-characteristics ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.font-characteristics li {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.font-characteristics li::before {
+    content: '•';
+    position: absolute;
+    left: -1.5rem;
+    color: var(--accent-2);
+}
+
+/* Expressive Typography Section */
+#expressive-typography {
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    background-color: var(--background);
+}
+
+#expressive-typography h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-dark);
+}
+
+.emotion-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.emotion-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.emotion-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-box h3 {
+    font-size: 1.2rem;
+    color: var(--accent-2);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Specific emotion styles */
+.happiness p {
+    animation: bounce 2s infinite;
+}
+
+.anger p {
+    animation: shake 0.5s infinite;
+}
+
+.fear p {
+    animation: pulse 2s infinite;
+}
+
+.excitement p {
+    animation: wiggle 1s infinite;
+}
+
+.sadness p {
+    animation: float 3s infinite;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .emotion-box {
+        padding: 1.5rem;
+    }
+    
+    .emotion-box p {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* Typography Posters Section */
+#typography-posters {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.poster-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.poster-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.poster-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.poster-details {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.poster-details img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.poster-card:hover img {
+    transform: scale(1.05);
+}
+
+.poster-details h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.poster-details p {
+    color: #666;
+    margin: 1rem 0;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.poster-details ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.poster-details li {
+    color: #555;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.poster-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .poster-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .poster-card {
+        margin-bottom: 2rem;
+    }
+
+    .poster-details img {
+        max-width: 100%;
+    }
+}
+
+/* Logo content wrapper styles */
+.logo-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+/* Logo text styles */
+.logo-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.logo-text h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.logo-details li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.logo-details li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+/* Logo image styles */
+.logo-image {
+    flex: 0 0 auto;
+    text-align: right;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.cred-logo {
+    max-width: 300px; /* Reduced size */
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover .cred-logo {
+    transform: scale(1.05);
+}
+
+/* Reference link styles */
+.reference-link {
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.reference-link a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.reference-link a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .logo-content-wrapper {
+        flex-direction: column;
+    }
+
+    .logo-text {
+        padding-right: 0;
+    }
+
+    .logo-image {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .cred-logo {
+        max-width: 250px; /* Even smaller on mobile */
+        margin: 0 auto;
+    }
+    
+    .reference-link {
+        text-align: center;
+    }
+}
+
+.logo-details ul ul {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.logo-details ul ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.logo-details h4 {
+    margin: 1rem 0;
+    color: #2c3e50;
+}
+
+.logo-details p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}

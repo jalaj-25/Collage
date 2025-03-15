@@ -1,0 +1,48 @@
+.similarity-section {
+    background-color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.similarity-section:hover {
+    transform: translateX(10px);
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.image-container img {
+    width: 250px;  /* Increased from 200px */
+    height: 250px; /* Increased from 150px */
+    object-fit: cover; /* This ensures images maintain their aspect ratio */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Make sure the list styling is consistent */
+li:not(.similarity-section) {
+    background-color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+li:not(.similarity-section):hover {
+    transform: translateX(10px);
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} 
