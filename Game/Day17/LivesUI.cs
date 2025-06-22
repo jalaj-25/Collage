@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+   
 public class LivesUI : MonoBehaviour
 {
     public TextMeshProUGUI livesText; // Corrected variable name
