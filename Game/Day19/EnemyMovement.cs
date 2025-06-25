@@ -12,7 +12,6 @@ public class EnemyMovement : MonoBehaviour
         enemy = GetComponent<Enemy>();
         target = WayPoints.points[0];
     }
-
     void Update()
     {
         Vector3 dir = target.position - transform.position;
