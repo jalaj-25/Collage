@@ -1,0 +1,6 @@
+ 1. Write a program to declare variables of different data types (int, double, char, and String) and print their values on the console. Use both primitive and reference datatypes.
+ 2. Write a program that reads two numbers from the user and performs the following arithmetic operations: addition, subtraction, multiplication, and division. Display the results for each operation.
+ 3. Write a program to demonstrate implicit and explicit type conversion (casting). Convert a double to an integer, and an integer to a double, and display the results.
+ 4. Write a program that takes two integers as input and uses comparison operators (==, !=, <, >, <=, >=) to compare the numbers. Display the results of the comparisons.
+ 5. Write a program that initializes an array of 5 integers and displays the sum of all the elements in the array.
+ 6. Write a program to perform matrix addition using two 2D arrays. Display the result of the matrix addition.
